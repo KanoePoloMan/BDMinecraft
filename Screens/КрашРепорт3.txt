@@ -1,0 +1,62 @@
+---- Minecraft Crash Report ----
+// There are four lights!
+
+Time: 26.12.22 23:18
+Description: Exception in server tick loop
+
+java.lang.NullPointerException: Exception in server tick loop
+	at lotr.common.world.spawning.LOTRBiomeSpawnList$SpawnListContainer.access$300(LOTRBiomeSpawnList.java:157)
+	at lotr.common.world.spawning.LOTRBiomeSpawnList$FactionContainer.determineFaction(LOTRBiomeSpawnList.java:220)
+	at lotr.common.world.spawning.LOTRBiomeSpawnList.determineFactions(LOTRBiomeSpawnList.java:73)
+	at lotr.common.world.spawning.LOTRBiomeSpawnList.getRandomSpawnEntry(LOTRBiomeSpawnList.java:87)
+	at lotr.common.world.spawning.LOTRSpawnerNPCs.getRandomSpawnListEntry(LOTRSpawnerNPCs.java:266)
+	at lotr.common.world.spawning.LOTRSpawnerNPCs.performSpawning(LOTRSpawnerNPCs.java:183)
+	at lotr.common.LOTRTickHandlerServer.onWorldTick(LOTRTickHandlerServer.java:135)
+	at cpw.mods.fml.common.eventhandler.ASMEventHandler_35_LOTRTickHandlerServer_onWorldTick_WorldTickEvent.invoke(.dynamic)
+	at cpw.mods.fml.common.eventhandler.ASMEventHandler.invoke(ASMEventHandler.java:54)
+	at cpw.mods.fml.common.eventhandler.EventBus.post(EventBus.java:140)
+	at cpw.mods.fml.common.FMLCommonHandler.onPostWorldTick(FMLCommonHandler.java:255)
+	at net.minecraft.server.MinecraftServer.func_71190_q(MinecraftServer.java:645)
+	at net.minecraft.server.MinecraftServer.func_71217_p(MinecraftServer.java:547)
+	at net.minecraft.server.integrated.IntegratedServer.func_71217_p(IntegratedServer.java:186)
+	at net.minecraft.server.MinecraftServer.run(MinecraftServer.java:427)
+	at net.minecraft.server.MinecraftServer$2.run(MinecraftServer.java:685)
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- System Details --
+Details:
+	Minecraft Version: 1.7.10
+	Operating System: Windows 10 (amd64) version 10.0
+	Java Version: 1.8.0_51, Oracle Corporation
+	Java VM Version: Java HotSpot(TM) 64-Bit Server VM (mixed mode), Oracle Corporation
+	Memory: 1560976680 bytes (1488 MB) / 3489660928 bytes (3328 MB) up to 17112760320 bytes (16320 MB)
+	JVM Flags: 7 total; -Xmx16302M -XX:+UnlockExperimentalVMOptions -XX:+UseG1GC -XX:G1NewSizePercent=20 -XX:G1ReservePercent=20 -XX:MaxGCPauseMillis=50 -XX:G1HeapRegionSize=32M
+	AABB Pool Size: 0 (0 bytes; 0 MB) allocated, 0 (0 bytes; 0 MB) used
+	IntCache: cache: 0, tcache: 0, allocated: 12, tallocated: 94
+	FML: MCP v9.05 FML v7.10.99.99 Minecraft Forge 10.13.4.1614 Optifine OptiFine_1.7.10_HD_U_E7 5 mods loaded, 5 mods active
+	States: 'U' = Unloaded 'L' = Loaded 'C' = Constructed 'H' = Pre-initialized 'I' = Initialized 'J' = Post-initialized 'A' = Available 'D' = Disabled 'E' = Errored
+	UCHIJAAAA	mcp{9.05} [Minecraft Coder Pack] (minecraft.jar) 
+	UCHIJAAAA	FML{7.10.99.99} [Forge Mod Loader] (forge-1.7.10-10.13.4.1614-1.7.10.jar) 
+	UCHIJAAAA	Forge{10.13.4.1614} [Minecraft Forge] (forge-1.7.10-10.13.4.1614-1.7.10.jar) 
+	UCHIJAAAA	lotr{Update v1.0.0 for Minecraft 1.7.10} [The Lord of the Rings Mod] (TheExampleMod-1.0.0.jar) 
+	UCHIJAAAA	tlauncher_custom_cape_skin{1.0} [TLSkinCape] (tlskincape_1.7.10-1.4.jar) 
+	GL info: ~~ERROR~~ RuntimeException: No OpenGL context found in the current thread.
+	Profiler Position: N/A (disabled)
+	Vec3 Pool Size: 0 (0 bytes; 0 MB) allocated, 0 (0 bytes; 0 MB) used
+	Player Count: 1 / 8; [EntityPlayerMP['KanoePoloMan'/297, l='Новый мир', x=83648,50, y=78,00, z=-15423,50]]
+	Type: Integrated Server (map_client.txt)
+	Is Modded: Definitely; Client brand changed to 'fml,forge'
+	OptiFine Version: OptiFine_1.7.10_HD_U_E7
+	Render Distance Chunks: 8
+	Mipmaps: 4
+	Anisotropic Filtering: 1
+	Antialiasing: 0
+	Multitexture: false
+	Shaders: null
+	OpenGlVersion: 4.6.0 Compatibility Profile Context 22.20.27.07.221020
+	OpenGlRenderer: Radeon RX 580 Series
+	OpenGlVendor: ATI Technologies Inc.
+	CpuCount: 16
